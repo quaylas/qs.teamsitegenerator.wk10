@@ -2,21 +2,27 @@ const { TestScheduler } = require('jest');
 const Employee = require('../lib/Employee');
 
 test('creates a new employee', () => {
-    const employee = new Employee('Eunice','1234','eunice1234@test.com');
+    const employee = new Employee('Eunice',1234,'eunice1234@test.com');
 
     expect(employee.empName).toBe('Eunice');
-    expect(employee.empId).toBe('1234');
-    expect(employee.empEmail).toBe('eunice1234@test.com');
+    expect(employee.empId).toEqual(expect.any(Number));
+    expect(employee.empEmail).toEqual(expect.stringContaining('@'));
 });
 
 test('gets employee\'s name', () => {
     const employee = new Employee('Eunice','1234','eunice1234@test.com');
 
-    expect(employee.getName()).toEqual(expect.stringContaining(employee.empName));
+    expect(employee.getName()).toEqual(employee.empName);
 });
 
 test('gets employee\'s id',() => {
     const employee = new Employee('Eunice','1234','eunice1234@test.com');
 
-    expect(employee.getId()).toEqual(expect.stringContaining(employee.empId));
+    expect(employee.getId()).toEqual(employee.empId);
+});
+
+test('gets employee\'s role', () => {
+    const employee = new Employee('Eunice','1234','eunice1234@test.com');
+
+    expect(employee.getRole()).toEqual('Employee');
 });
