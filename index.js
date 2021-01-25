@@ -5,11 +5,13 @@ const { off } = require('process');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generatePage = require('./src/page-template.js');
+const {writeFile, copyFile} = require('./src/generate-site.js');
 
 const teamData = [];
 
 
-// function to request and return information about the team manager
+// function to request information about the team manager. Returns an array of team data, containing objects of various types.
 const getMgr = () => {
     let questions = [
         {
@@ -73,7 +75,7 @@ const getMgr = () => {
     })
 };
 
-// function to request  information about the team
+// function to request information about the team. Returns an array of team data, containing objects of various types.
 const getTeam = (teamData) => {
 
     return inquirer.prompt([{
@@ -95,7 +97,7 @@ const getTeam = (teamData) => {
     });
 };
 
-// function to handle an engineer added to the team
+// function to handle an engineer added to the team. Returns an array of team data, containing objects of various types.
 const getEngineer = teamData =>{
     let questions = [
         {
@@ -174,7 +176,7 @@ const getEngineer = teamData =>{
     });
 };
 
-// function to handle an intern added to the team
+// function to handle an intern added to the team. Returns an array of team data, containing objects of various types.
 const getIntern = teamData => {
     let questions =[
         {
@@ -255,9 +257,10 @@ const getIntern = teamData => {
 
 getMgr()
     .then(getTeam)
-    .then(teamData => {
-        console.log(teamData);
-    });
+    .then(generatePage)
+    .then(writeFile)
+    .then(copyFile);
+
 
 // getMgr()
 //     .then(getTeam)
