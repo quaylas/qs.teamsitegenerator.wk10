@@ -6,7 +6,9 @@
 
   A simple application developed using Node.js and the Inquirer module to generate HTML for a team profile page based on employee information provided by a user.
 
-  
+  You can view demo of the application [here](https://drive.google.com/file/d/16CY6zTAqSvXpSx5GJ7k1ZCNJY_I9u07R/view).
+
+  Examples of generated files are available in the 'dist' directory (demo.html and demo.css).
   
 
   ## Table of Contents
@@ -19,7 +21,7 @@
 
   ## Installation
 
-  This application runs oono Node.js and uses the Inquirer module. Visit their website (http://www.nodejs.org/download/) for download and installation instructions. Once you've installed Node.js, clone the repository and install its dependencies by running '$ npm  install' in the command line.
+  This application runs on Node.js and uses the Inquirer module. Visit [their website](http://www.nodejs.org/download/) for download and installation instructions. Once you've installed Node.js, clone the repository and install its dependencies by running '$ npm  install' in the command line.
 
   ## Usage
 

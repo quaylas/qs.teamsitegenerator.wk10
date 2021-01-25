@@ -8,7 +8,7 @@ const generateEngineers =  engineers => {
         return '';    
     }
     return `
-        <section class="content container">
+        <section class="content container m-5">
             <h2 class="title has-text-dark">Engineers</h2>
             <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
@@ -35,7 +35,7 @@ const generateInterns = interns => {
         return '';
     }
     return `
-        <section class="content container">
+        <section class="content container m-5">
             <h2 class="title has-text-dark">Interns</h2>
             <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 

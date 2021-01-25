@@ -1,0 +1,17 @@
+.employee {
+    flex-basis: 22%;
+    margin: 30px 15px;
+    border-radius: 10px; 
+}
+.engineer {
+    border: 2px solid hsl(171, 100%, 29%);
+}
+.engineer a {
+    color: hsl(171, 100%, 29%);
+}
+.intern {
+    border: 2px solid hsl(204, 71%, 39%);
+}
+.intern a {
+    color:  hsl(204, 71%, 39%); 
+}
