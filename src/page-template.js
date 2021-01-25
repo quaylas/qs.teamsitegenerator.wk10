@@ -12,12 +12,12 @@ const generateEngineers =  engineers => {
             <h2 class="title has-text-dark">Engineers</h2>
             <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
-                ${engineers.map(({ empName, empEmail, empId, github }) => {
+                ${engineers.map(({ empName, empEmail, empId, empRole, github }) => {
                     return `<article class="employee engineer is-flex is-flex-direction-column pb-3">
                     <h3 class="title has-background-primary-dark has-text-white py-3 px-2">
                         ${empName}
                     </h3>
-                    <h4 class="subtitle has-text-primary-dark p-2">Engineer</h4>
+                    <h4 class="subtitle has-text-primary-dark p-2">${empRole}</h4>
                     <p class="py-1 px-2 has-text-grey">ID: ${empId}</p>
                     <p class="py-1 px-2 has-text-grey"><a href="https://github.com/${github}" target="_blank">${github}</a></p>
                     <p class="py-1 px-2 has-text-grey"><a href="mailto:${empEmail}">${empEmail}</a></p>
@@ -39,12 +39,12 @@ const generateInterns = interns => {
             <h2 class="title has-text-dark">Interns</h2>
             <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
-                ${interns.map(({ empName, empEmail, empId, school}) => {
+                ${interns.map(({ empName, empEmail, empId, empRole, school}) => {
                     return `<article class="employee intern is-flex is-flex-direction-column pb-3">
                     <h3 class="title has-background-info-dark has-text-white py-3 px-2">
                         ${empName}
                     </h3>
-                    <h4 class="subtitle has-text-info-dark p-2">Intern</h4>
+                    <h4 class="subtitle has-text-info-dark p-2">${empRole}</h4>
                     <p class="py-1 px-2 has-text-grey">ID: ${empId}</p>
                     <p class="py-1 px-2 has-text-grey">${school}</p>
                     <p class="py-1 px-2 has-text-grey"><a href="mailto:${empEmail}">${empEmail}</a></p>
