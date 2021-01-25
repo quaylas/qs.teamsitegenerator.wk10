@@ -8,7 +8,7 @@ const generateEngineers =  engineers => {
         return '';    
     }
     return `
-        <section class="content section container">
+        <section class="content container">
             <h2 class="title has-text-dark">Engineers</h2>
             <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
@@ -17,10 +17,10 @@ const generateEngineers =  engineers => {
                     <h3 class="title has-background-primary-dark has-text-white py-3 px-2">
                         ${empName}
                     </h3>
-                    <h4 class="subtitle has-text-primary-dark p-2">${empRole}</h4>
-                    <p class="py-1 px-2 has-text-grey">ID: ${empId}</p>
-                    <p class="py-1 px-2 has-text-grey"><a href="https://github.com/${github}" target="_blank">${github}</a></p>
-                    <p class="py-1 px-2 has-text-grey"><a href="mailto:${empEmail}">${empEmail}</a></p>
+                    <h4 class="subtitle has-text-primary-dark pt-2 px-2 mb-0">${empRole}</h4>
+                    <p class="py-1 px-4 has-text-primary-dark is-size-7">ID: ${empId}</p>
+                    <p class="py-1 px-2 has-text-grey mb-1">GitHub: <a href="https://github.com/${github}" target="_blank">${github}</a></p>
+                    <p class="py-1 px-2 has-text-grey">Email: <a href="mailto:${empEmail}">${empEmail}</a></p>
                 </article>
                 `;
                 })
@@ -35,7 +35,7 @@ const generateInterns = interns => {
         return '';
     }
     return `
-        <section class="content section container">
+        <section class="content container">
             <h2 class="title has-text-dark">Interns</h2>
             <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
@@ -44,9 +44,9 @@ const generateInterns = interns => {
                     <h3 class="title has-background-info-dark has-text-white py-3 px-2">
                         ${empName}
                     </h3>
-                    <h4 class="subtitle has-text-info-dark p-2">${empRole}</h4>
-                    <p class="py-1 px-2 has-text-grey">ID: ${empId}</p>
-                    <p class="py-1 px-2 has-text-grey">${school}</p>
+                    <h4 class="subtitle has-text-info-dark pt-2 px-2 mb-0">${empRole}</h4>
+                    <p class="py-1 px-4 has-text-info-dark is-size-7">ID: ${empId}</p>
+                    <p class="py-1 px-2 has-text-info-grey mb-1">${school}</p>
                     <p class="py-1 px-2 has-text-grey"><a href="mailto:${empEmail}">${empEmail}</a></p>
                 </article>
                 `;
@@ -76,14 +76,14 @@ module.exports = teamData  => {
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <section class="hero is-dark">
+        <section class="hero is-dark content">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
                         ${manager.empName}
                     </h1>
                     <p class="subtitle">
-                        ${manager.empEmail} | Office #${manager.officeNumber}
+                        <a href=mailto:${manager.empEmail}>${manager.empEmail}</a> | Office #${manager.officeNumber}
                     </p>
                 </div>
             </div>
