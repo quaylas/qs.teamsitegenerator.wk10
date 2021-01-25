@@ -259,7 +259,8 @@ getMgr()
     .then(getTeam)
     .then(generatePage)
     .then(writeFile)
-    .then(copyFile);
+    .then(copyFile)
+    .then(console.log('Your team profile HTML and CSS files have been generated. Check them out in the "dist" folder!'));
 
 
 // getMgr()

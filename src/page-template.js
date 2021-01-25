@@ -10,7 +10,7 @@ const generateEngineers =  engineers => {
     return `
         <section class="content section container">
             <h2 class="title has-text-dark">Engineers</h2>
-            <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between">
+            <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
                 ${engineers.map(({ empName, empEmail, empId, github }) => {
                     return `<article class="employee engineer is-flex is-flex-direction-column pb-3">
@@ -37,7 +37,7 @@ const generateInterns = interns => {
     return `
         <section class="content section container">
             <h2 class="title has-text-dark">Interns</h2>
-            <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between">
+            <div class="content is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-flex-start">
 
                 ${interns.map(({ empName, empEmail, empId, school}) => {
                     return `<article class="employee intern is-flex is-flex-direction-column pb-3">
