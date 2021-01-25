@@ -259,15 +259,13 @@ getMgr()
     .then(getTeam)
     .then(generatePage)
     .then(writeFile)
-    .then(copyFile)
-    .then(console.log('Your team profile HTML and CSS files have been generated. Check them out in the "dist" folder!'));
+    .then(pageHTML => {
+        return copyFile();
+    })
+    .then(copyFileResponse => {
+        console.log(copyFileResponse.message);
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
-
-// getMgr()
-//     .then(getTeam)
-//     .then(teamData => {
-//         return generateTeamPage(teamData);
-//     })
-//     .then(teamPageHTML => {
-//         return writeFile(teamPageHTML);
-//     })

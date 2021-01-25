@@ -12,7 +12,7 @@ const writeFile = pageHTML => {
             // otherwise, resolve and send data to .then
             resolve ({
                 ok: true,
-                message: 'Team Profile HTML file has been created and is available in the "dist" folder.'
+                message: 'Team Profile HTML file created in "dist" folder!'
             });
         });
     });
@@ -28,7 +28,7 @@ const copyFile = () => {
 
             resolve({
                 ok: true,
-                message: 'Style sheet copied!'
+                message: 'Style sheet copied! HTML and CSS files have been added to the "dist" folder!'
             });
         });
     });
